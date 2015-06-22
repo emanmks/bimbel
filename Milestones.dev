@@ -1,0 +1,211 @@
+Sistem Informasi Kesiswaan V.1 2014
+
+Milestone I
+1. Kesiswaan
+	a. Siswa
+	b. Pendaftaran
+		- Baru
+			Nomorpokok Baru, Format : Kode Tingkat - Kode Project - Kode Cabang + Nomor Urut
+		- Lanjutan
+			Nomorpokok Baru, Format : Kode Tingkat - Kode Project - Kode Cabang + Nomor Urut
+		- Retensi
+			Nomorpokok Baru, Format : Kode Tingkat - Kode Project - Kode Cabang + Nomor Urut
+		- Alumni
+			Nomorpokok Baru, Format : Kode Tingkat - Kode Project - Kode Cabang + Nomor Urut
+		- Pindahan
+			Nomorpokok Lama dari Cabang Sebelumnya
+		- Daftar Ulang
+			Program yang akan Habis ke Program yang akan Jalan dalam Satu Project yang sama
+			Nomorpokok tetap sama
+		- Mendaftar Lebih dari Satu Kali di Project yang Sama, Lupa Daftar Ulang
+			Nomorpokok Baru, Format : Kode Tingkat - Kode Project - Kode Cabang + Nomor Urut
+	c. Penempatan
+		- Biaya Bimbingan
+		- Program Bimbingan
+		- Jurusan (Opsional)
+		- Jangka Waktu Belajar
+	d. Lanjut Program
+	e. Receivable
+	f. Non Aktif
+		- Mengundurkan Diri
+		- Drop Out
+		- Pindah Cabang
+		- Program Belajar Selesai
+
+2. Akademik
+	a. Kelas
+	b. Penasehat Akademik
+	c. Roster
+	d. Presensi Pengajar
+	e. Presensi Siswa
+	f. Partisipasi Kegiatan
+	g. Nilai
+		- Quiz
+		- Kegiatan
+3. Keuangan
+	a. Receivable
+		Causes:
+		- Pendaftaran
+		- Biaya Bimbingan
+			* Angsuran
+		- Pindah Kelas
+		- Denda
+	b. Reduction
+		Causes:
+		- Discount
+		- Promo
+		- Voucher
+		- Returnment
+		- Charge
+	b. Pendapatan
+		- Payment
+	c. Pengeluaran
+		- Returnment
+		- Operational
+		- Payroll
+4. Kepegawaian
+	a. Pegawai
+	b. Presensi Pegawai
+	c. Payroll
+
+- Receivable [3-b]
+	1. Biaya Bimbingan ditentukan oleh Kelas yang diambil
+	2. Biaya Pendaftaran Bukan bagian dari Biaya Bimbingan
+	3. Biaya Bimbingan dienkapsulasi dengan komposisi sebagai berikut:
+		a. Biaya Bimbingan dari Kelas yang diambil
+		b. Unsur Pengurangan/Potongan/Reduksi Biaya Bimbingan:
+			- Diskon
+			- Voucher
+			- Promo
+		c. Sisa Beban Biaya Bimbingan setelah dikurangi unsur-unsur Pereduksi Biaya Bimbingan
+	4. Cara Pembayaran:
+		a. Tunai
+			- (PDF + Biaya) - (Diskon + Voucher + Promo)
+			- Dibayarkan Hari H Pendaftaran
+		b. Angsur
+			- (PDF + Biaya) - (Diskon + Voucher + Promo)
+			- Bayar pada hari H : PDF + Angsuran I
+			- Setup Installment / Angsuran dari Sisa Biaya
+		c. Setup Installment
+			- Total Sisa Biaya
+			- Tentukan Jumlah Bulan Angsuran
+			- Buat Jadwal Angsuran
+	5. Untuk Siswa Pindah Cabang
+		a. Biaya Administrasi Perpindahan
+		b. Sisa Biaya Bimbingan dari Cabang sebelumnya
+		c. Setup Angsuran berdasarkan jumlah Sisa Biaya Bimbingan dari Cabang sebelumnya
+		d. Tambahan Biaya jika terjadi upgrade kelas
+	6. Penerimaan Angsuran
+		a. Pembayaran dengan memilih Angsuran ke berapa?
+		b. Pembayaran akan mengupdate data sisa untuk angsuran terpilih
+		c. Penerimaan pembayaran angsuran akan masuk ke data penerimaan sebagai pos Angsuran
+		d. Jika pembayaran untuk angsuran terpilih lebih kecil dari jumlah yang seharusnya dibayarkan, maka angsuran terpilih masih akan menjadi kewajiban bagi siswa, atau dapat digabungkan ke dalam angsuran bulan berikutnya.
+
+- Receivable
+	1. Biaya PDF (Pendaftaran)
+	2. Biaya Bimbingan - Reduksi
+		a. Siswa Baru : Biaya Bimbingan:
+			- Biaya Bimbingan Sesuai Kelas yang diambil
+			- Reduksi : Voucher, Promo, Diskon
+		b. Lanjutan : Biaya Bimbingan:
+			- Biaya Bimbingan Sesuai Kelas yang diambil
+			- Reduksi : Voucher, Promo, Diskon
+		c. Pindahan : Biaya Bimbingan
+			- Sisa Biaya Bimbingan dari Cabang Sebelumnya
+			- Biaya Upgrade Kelas jika ada
+	3. Denda
+	4. Pindah Kelas
+
+- Reduksi
+	1. Promo
+	2. Voucher
+	3. Diskon
+	4. Charge
+	5. Handbook
+
+- Pemotongan/Charge
+	1. OP Pusat
+	2. OP Cabang
+	3. Fee Contact Person
+	4. SGS
+	5. Tiket Ultah
+	6. Denda ke Pusat
+
+- Penerimaan
+	Pos-pos penerimaan
+	1. Biaya Pendaftaran
+	2. Biaya Bimbingan dari Pembayaran Tunai
+	3. Angsuran
+	4. Biaya Administrasi Pindah Kelas
+	5. Biaya Administrasi Pindah Keluar Cabang
+	6. Biaya Administrasi Pindah Masuk Cabang
+	7. Denda
+	8. Pendaftaran Kegiatan
+
+- Pengeluaran
+	1. Operasional
+	2. Gaji
+	3. Setoran ke Pusat
+	4. Pengembalian Biaya Bimbingan
+	5. Biaya Kegiatan
+
+- Handbook
+	1. Handbook diterima Siswa berdasarkan kriteria:
+		a. Tingkatan
+		b. Jurusan
+	2. PO ke Pusat
+	3. Stock
+	4. Pengambilan Handbook
+
+- Sistem Presensi Harian
+	1. Input Presensi dilakukan per Kelas
+	2. Show Presensi Dapat dilihat
+		a. Per Siswa
+		b. Per Kelas Per Tanggal Tertentu
+
+- Sistem Perpindahan Penempatan Kelas
+	1. Temukan Kelas Asal
+	2. Temukan Siswa
+	3. Tentukan Kelas Tujuan
+	4. Tentukan Biaya Administrasi Perpindahan
+
+- Siswa Keluar dan Pindah Keluar Cabang
+	1. Status Non Aktif
+	2. Status Penempatan Non Aktif
+	3. Status Issue/Nomor Pokok Non Aktif
+	4. Biodata Tersimpan
+	5. History Pembayaran dan Akademik masih tersimpan
+
+- Partisipasi Kegiatan
+	1. Pilih Agenda Kegiatan
+	2. Temukan Siswa
+	3. Daftarkan Partisipasi Kegiatan
+	4. Terima Pembayaran Pendaftaran Kegiatan
+
+- Sistem Penilaian Siswa
+	1. Nilai Quiz
+		a. Input dilakukan per Kelas
+		b. Data yang dibutuhkan: Bidang Studi, Materi, Kelas, Tanggal, Daftar Nilai Siswa
+	2. Nilai Kegiatan
+		a. Input dilakukan per Kegiatan
+		b. Input nilai untuk siswa yang terdaftar
+
+- Raport Siswa
+	1. Raport disajikan per Siswa per Kelas
+	2. Komponen Raport
+		a. Biodata Siswa
+		b. Penempatan Kelas
+		c. Presensi di Kelas yang dimaksud
+		d. Nilai Quiz dan Nilai Kegiatan
+		e. Total Beban
+		f. Jadwal Angsuran
+		g. History Pembayaran
+
+- History / Timeline
+	1. History Aktifitas Siswa
+	2. History Aktifitas Kelas
+	3. History Aktifitas Karyawan
+
+- Laporan-laporan
+	1. Laporan Detail
+	2. Laporan Rekap

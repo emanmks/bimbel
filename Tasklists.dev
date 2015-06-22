@@ -1,0 +1,178 @@
+Project
+	1. Tampilkan Info Project Terkini [OK]
+	2. Form Pindah Project [OK]
+	3. Form CRUD Charge [OK]
+
+Data
+	1. Form CRUD Klasifikasi [OK]
+
+Lokasi
+	1. Tampilkan Info Lokasi Terkini [OK]
+	2. Form Pindah Lokasi untuk Super Admin [OK]
+
+Format Currency for Currency Input [OK]
+
+Kesiswaan
+	1. Siswa Baru
+		a. Form Create Biodata
+		b. Form Create Data Orang Tua
+		c. Form Find Saudara untuk Assignment Orang Tua
+		d. Form Pilih Kelas
+		e. Form Setup Biaya
+			* Biaya PDF
+			* Receivable: Biaya Bimbingan
+			* Reduksi:
+				- Pilih Voucher
+				- Pilih Promo
+				- Pilih Diskon
+				- Pilih Charge
+			* Sisa Biaya Bimbingan
+			* Get Bayar di awal?
+		f. Form Setup Jadwal Angsuran
+			* Get Jumlah Angsuran
+			* Set Tanggal Jatuh Tempo Angsuran
+			* Set Jumlah per Angsuran
+		g. Halaman Cetak Summary Pendaftaran
+		h. Halaman Cetak Bukti Pendaftaran
+	2. Siswa Lanjutan
+		a. Form Find Biodata
+		b. Form Pilih Kelas
+		c. Form Setup Biaya
+			* Biaya PDF
+			* Receivable: Biaya Bimbingan
+			* Reduksi:
+				- Pilih Voucher
+				- Pilih Promo
+				- Pilih Diskon
+				- Pilih Charge
+			* Sisa Biaya Bimbingan
+			* Get Bayar di awal?
+		d. Form Setup Jadwal Angsuran
+			* Get Jumlah Angsuran
+			* Set Tanggal Jatuh Tempo Angsuran
+			* Set Jumlah per Angsuran
+		e. Halaman Cetak Invoice
+			Total Receivable - PDF + Angsuran I
+		f. Halaman Cetak Bukti Pendaftaran
+	3. Siswa Pindahan
+		a. Form Create Biodata
+		b. Form Create Data Orang Tua
+		c. Form Find Saudara untuk Assignment Orang Tua
+		d. Form Pilih Kelas
+		e. Form Setup Biaya
+			* Biaya PDF
+			* Sisa Biaya Bimbingan
+			* Tambahan Biaya Bimbingan Jika Ada
+		f. Form Setup Jadwal Angsuran
+			* Get Jumlah Angsuran
+			* Set Tanggal Jatuh Tempo Angsuran
+			* Set Jumlah per Angsuran
+		g. Halaman Cetak Invoice
+		h. Halaman Cetak Bukti/Summary Pendaftaran
+
+	4. Presensi Harian
+		a. Halaman List Aktifitas Presensi Terakhir
+		b. Form Input Presensi
+		c. Form Update Presensi
+
+	5. Pindah Kelas
+		a. Halaman List Aktifitas Pindah Kelas Terakhir [OK]
+		b. Form Input Pindah Kelas [OK]
+		c. Form Update Pindah Kelas [OK]
+		d. Pembatalan Pindah Kelas [OK]
+
+	6. Non Aktif Siswa
+		a. Halaman List Penonaktifan Siswa Terakhir
+		b. Form Penonaktifan
+		c. Form Update Info Penonaktifan
+		d. Pembatalan Penonaktifan
+
+	7. Kelola Data Siswa
+		a. Halaman List Siswa [OK]
+		b. Halaman Profile Siswa [OK]
+			- Biodata Siswa [OK]
+			- Data Orang Tua [OK]
+			- Keuangan
+				* Receivable
+				* Reductions
+				* Installments
+				* Earnings
+			- Handbook
+			- Timelien [OK]
+		d. Form Update Biodata + Ortu Siswa [OK]
+		e. Form Update Jadwal dan Nilai Angsuran
+
+Kegiatan
+	1. CRUD Partisipasi Kegiatan [OK]
+
+Mitra / Kontak Person
+	1. CRUD Mitra [OK]
+
+Handbook
+	1. CRUD Handbook [OK]
+
+Aset
+	1. CRUD Aset [OK]
+
+Nilai
+	1. Halaman List Input Nilai Terakhir
+	2. Form Input Nilai Kegiatan
+	3. Form Input Nilai Quiz
+
+Penerimaan
+	1. Halaman List Angsuran Bulan Berjalan
+	2. Halaman List Penerimaan
+	2. Form Penerimaan Angsuran
+	3. Form Update Penerimaan
+	4. Pembatalan Penerimaan
+
+Payroll
+	1. Halaman List Payroll Bulan Berjalan
+	2. Form Penyerahan Salary
+	3. Form Update Penyerahan Salary
+	4. Pembatalan Penyerahan Salary
+
+Pengeluaran
+	1. Halaman List Pengeluaran Bulan Berjalan
+	2. Form Pengeluaran Operasional
+	3. Form Update Pengeluaran Operasional
+	4. Pembatalan Pengeluaran
+
+Sanksi
+	1. Halaman Sanksi Siswa
+	2. Halaman Sanksi Karyawan
+	3. Form Input Sanksi Siswa + Penerimaan Denda
+	4. Form Input Sanksi Karyawan + Pemotongan Salary
+	
+Jadwal Belajar
+	1. Halaman Jadwal Belajar dalam Sepekan
+	2. Form Buat Jadwal
+	3. Form Update Jadwal
+
+Raport
+	1. Halaman Raport
+
+Laporan
+	1. Laporan Detail
+		a. Halaman Biodata Siswa per Angkatan
+		b. Halaman Biodata Siswa per Kelas
+		c. Halaman Biodata Siswa per Program
+		d. Halaman Biodata Siswa per Program Berdasarkan Durasi Bimbingan
+		e. Halaman Detail Pemasukan per Periode
+	2. Laporan Rekap
+		a. Halaman Rekap Jumlah Siswa per Kelas per Tingkatan per Periode
+		b. Halaman Rekap Siswa Non Aktif (Pindah Ke Cabang lain, Keluar/Mundur, Drop Out) per TIngkatan
+		c. Halaman Rekap Siswa Masuk (Daftar Baru, Pindahan dari Cabang lain) per Tingkatan
+		d. Halaman Rekap Siswa Aktif (Rekap Siswa Masuk - Rekap Siswa Non Aktif)
+		e. Halaman Rekap Potongan Biaya per Tingkatan per Jenis Promo, Voucher, Diskon
+		f. Halaman Rekap Pendapatan dari Setiap Pos Pemasukan per Tingkatan
+
+Handbook
+	1. CRUD Handbook
+	2. CRUD Order Handbook
+	3. CRUD Pengambilan Handbook
+	4. Opname Handbook
+
+Aset Perusahaan
+	1. CRUD Aset
+	2. Opname Aset
